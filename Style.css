@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    padding-top: 70px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(18, 18, 18, 0.9);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #00FFFF;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+/* Hero */
+.hero {
+    background: url('./images/BG.jpg') no-repeat center center/cover;
+    color: #00FFFF;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.features {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.feature-box {
+    background: rgba(107, 105, 105, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Services */
+.services {
+    background: #1F1F1F;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.service-icons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.service-item {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.service-item i {
+    font-size: 2.5rem;
+    color: #00FFFF;
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* About */
+.about {
+    background: #181818;
+    color: white;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Updated About Section Image Styling */
+.about-image {
+    flex: 1;
+    max-width: 400px; /* Set a smaller maximum width for the image */
+    margin-left: auto; /* Push the image to the right */
+    margin-right: 0; /* Ensure no extra margin on the right */
+    border-radius: 10px; /* Keep the rounded corners */
+    overflow: hidden; /* Ensure the image stays within its container */
+}
+
+.about-image img {
+    width: 100%; /* Ensure the image scales within the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any inline spacing issues */
+}
+
+/* —— Portfolio Styles —— */
+.portfolio {
+    background: #1b1b1b;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  .portfolio h2 span {
+    color: #00FFFF;
+  }
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  .portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .portfolio-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s;
+  }
+  .portfolio-item:hover img {
+    transform: scale(1.1);
+  }
+  .portfolio-item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    transform: translateY(100%);
+    transition: transform 0.3s;
+  }
+  .portfolio-item:hover .overlay {
+    transform: translateY(0);
+  }
+  .portfolio-item .overlay h3 {
+    margin: 0;
+    color: #00FFFF;
+  }
+  
+  /* —— Enhanced Contact Styles —— */
+  .contact {
+    background: #121212;
+    padding: 80px 20px;
+  }
+  .contact-content {
+    display: flex;
+    gap: 50px;
+    
+    align-items: flex-start;
+    justify-content: space-between; /* Ensures proper spacing between elements */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  }
+  .contact-info {
+    flex: 1;
+    min-width: 300px; /* Ensures consistent minimum width */
+    max-width: 500px; /* Prevents elements from stretching too wide */
+    margin: 10px auto; /* Centers the elements horizontally */
+    text-align: left; /* Ensures text alignment is consistent */
+  }
+  .contact-form {
+    flex: 1;
+    min-width: 300px; /* Ensures consistent minimum width */
+    max-width: 500px; /* Prevents elements from stretching too wide */
+    margin: 0 auto; /* Centers the elements horizontally */
+    text-align: left; /* Ensures text alignment is consistent */
+    display: flex;
+    margin: 10px;
+    flex-direction: column; /* Aligns form elements vertically */
+    gap: 15px; /* Adds spacing between form elements */
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%; /* Ensures inputs take full width of the container */
+    padding: 10px; /* Adds padding for better usability */
+    border-radius: 5px; /* Adds rounded corners */
+    font-size: 1rem; /* Ensures consistent font size */
+    background: #2a2a2a;
+    border: none;
+    margin: 10px;
+    color: #e0e0e0;
+  }
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #777;
+  }
+  .contact-form button {
+    background: #00FFFF; /* Button background color */
+    color: #121212; /* Button text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .contact-form button:hover {
+    background: #00cccc; /* Darker shade for hover effect */
+  }
+  
+  /* Responsive Design for Contact Section */
+  @media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column; /* Stacks elements vertically on smaller screens */
+        align-items: center; /* Centers elements */
+    }
+    .contact-info, .contact-form {
+        max-width: 100%; /* Ensures elements take full width on smaller screens */
+    }
+  }
+  
+/* Footer */
+.footer {
+    background: #121212;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features, .service-icons, .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
